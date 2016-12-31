@@ -1,7 +1,6 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "swow"
 require 'vcr'
-require 'webmock'
 require 'dotenv'
 require 'coveralls'
 
