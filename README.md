@@ -1,5 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/wipeinc/swow/badges/gpa.svg)](https://codeclimate.com/github/wipeinc/swow)
 [![Build Status](https://travis-ci.org/wipeinc/swow.svg?branch=master)](https://travis-ci.org/wipeinc/swow)
+[![Coverage Status](https://coveralls.io/repos/github/wipeinc/swow/badge.svg?branch=master)](https://coveralls.io/github/wipeinc/swow?branch=master)
 
 # Swow
 
