@@ -16,11 +16,11 @@ module Swow
   		@region = region
 
   		@conn = Faraday.new(url: base_url, params: default_params) do |builder|
-			  builder.request  :url_encoded             # form-encode POST params
-			  builder.response logger if logger
-			  builder.response :oj # parse json code
-			  builder.adapter  Faraday.default_adapter  # make requests with Net::HTTP
-		end
+  			  builder.request  :url_encoded             # form-encode POST params
+  			  builder.response logger if logger
+  			  builder.response :oj # parse json code
+  			  builder.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+  		end
   	end
 
   	def base_url
