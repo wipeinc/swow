@@ -3,11 +3,10 @@ require "swow"
 require 'vcr'
 require 'webmock'
 require 'dotenv'
+require 'coveralls'
 
+Coveralls.wear!
 Dotenv.load
-
-require "simplecov"
-SimpleCov.start
 
 VCR.configure do |c|
 	c.cassette_library_dir = 'spec/cassettes'
