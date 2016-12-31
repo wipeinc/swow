@@ -11,7 +11,7 @@ VCR.configure do |c|
   c.hook_into :faraday
   c.configure_rspec_metadata!
   c.filter_sensitive_data('BNET_API_KEY') { ENV["BNET_API_KEY"] }
-  c.default_cassette_options = { :record => :all  }
+  c.default_cassette_options = { :record => :once  }
 
 end
 
