@@ -15,7 +15,7 @@ module Swow
 
   		@conn = Faraday.new(url: base_url, params: default_params) do |builder|
   			  builder.request  :url_encoded
-  			  builder.response logger if logger
+  			  builder.response :detailed_logger, logger if logger
           builder.response :battlenet_errors
   			  builder.response :oj # parse json code
 
