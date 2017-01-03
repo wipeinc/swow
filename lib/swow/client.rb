@@ -1,7 +1,3 @@
-require "faraday"
-require 'faraday_middleware/parse_oj'
-require "oj"
-
 module Swow
 
   class Client
@@ -18,10 +14,12 @@ module Swow
   		@region = region
 
   		@conn = Faraday.new(url: base_url, params: default_params) do |builder|
-  			  builder.request  :url_encoded             # form-encode POST params
+  			  builder.request  :url_encoded
   			  builder.response logger if logger
+          builder.response :battlenet_errors
   			  builder.response :oj # parse json code
-  			  builder.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+
+  			  builder.adapter  Faraday.default_adapter
   		end
   	end
 

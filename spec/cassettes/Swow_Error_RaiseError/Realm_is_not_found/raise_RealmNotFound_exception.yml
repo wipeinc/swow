@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/wow/character/zzzz/zzzz?apikey=BNET_API_KEY&locale=en_GB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.1
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      content-type:
+      - application/json;charset=utf-8
+      date:
+      - Tue, 03 Jan 2017 18:13:25 GMT
+      retry-after:
+      - '600'
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      x-mashery-responder:
+      - prod-j-worker-us-east-1b-118.mashery.com
+      x-plan-qps-allotted:
+      - '100'
+      x-plan-qps-current:
+      - '1'
+      x-plan-quota-allotted:
+      - '36000'
+      x-plan-quota-current:
+      - '1'
+      x-plan-quota-reset:
+      - Tuesday, January 3, 2017 7:00:00 PM GMT
+      content-length:
+      - '46'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"status":"nok", "reason": "Realm not found."}'
+    http_version: 
+  recorded_at: Tue, 03 Jan 2017 18:13:25 GMT
+recorded_with: VCR 3.0.3
