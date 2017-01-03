@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Swow::Client do
 	let(:bnet_eu) { Swow::Client.new(ENV["BNET_API_KEY"], "eu", logger: false) }
-	it "doesn't raise en error with a valid region" do 
+	it "doesn't raise en error with a valid region" do
 		expect { bnet_eu }.not_to raise_error
 	end
 
@@ -16,6 +16,14 @@ describe Swow::Client do
 		it "contains a realm array", :vcr do
 			expect(eu_realm_status).to be_a(Hash)
 			expect(eu_realm_status["realms"]).to be_a(Array)
+		end
+	end
+
+	describe "character_profile" do
+		let(:sweetlie) { bnet_eu.character_profile("Archimonde", "Sweetlie")}
+		it "fetch basic information about character", :vcr do
+			expect(sweetlie).to be_a(Hash)
+			expect(sweetlie["name"]).to eq("Sweetlie")
 		end
 	end
 end

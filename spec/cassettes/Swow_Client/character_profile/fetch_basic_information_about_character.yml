@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/wow/character/Archimonde/Sweetlie?apikey=BNET_API_KEY&locale=en_GB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-language:
+      - en-GB
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Tue, 03 Jan 2017 10:37:24 GMT
+      last-modified:
+      - Tue, 03 Jan 2017 04:12:22 GMT
+      retry-after:
+      - '600'
+      server:
+      - Apache
+      vary:
+      - Accept-Encoding
+      x-frame-options:
+      - SAMEORIGIN
+      x-mashery-responder:
+      - prod-j-worker-us-east-1b-127.mashery.com
+      x-plan-qps-allotted:
+      - '100'
+      x-plan-qps-current:
+      - '1'
+      x-plan-quota-allotted:
+      - '36000'
+      x-plan-quota-current:
+      - '1'
+      x-plan-quota-reset:
+      - Tuesday, January 3, 2017 11:00:00 AM GMT
+      content-length:
+      - '217'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"lastModified":1483416742000,"name":"Sweetlie","realm":"Archimonde","battlegroup":"Misery","class":11,"race":8,"gender":1,"level":110,"achievementPoints":18385,"thumbnail":"archimonde/223/134141151-avatar.jpg","calcClass":"U","faction":1,"totalHonorableKills":12867}'
+    http_version: 
+  recorded_at: Tue, 03 Jan 2017 10:37:25 GMT
+recorded_with: VCR 3.0.3
