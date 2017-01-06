@@ -5,6 +5,7 @@ require "oj"
 
 require "swow/version"
 require "swow/constants"
+require "swow/parameters"
 require "swow/error"
 require "swow/client"
 

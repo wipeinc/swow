@@ -19,6 +19,7 @@ module Swow
           builder.response :battlenet_errors
   			  builder.response :oj # parse json code
 
+          builder.options[:params_encoder] = Swow::ParamsEncoder
   			  builder.adapter  Faraday.default_adapter
   		end
   	end
@@ -34,6 +35,7 @@ module Swow
 
 
     def character_profile(realm, name, fields: [], locale: @locale)
+      fields = CHARACTER_FIELDS if fields == :all
       fields = [fields].flatten
       if !fields.empty? && !fields.all? { |field| CHARACTER_FIELDS.include?(field) }
         raise "Invalid field array #{field}"

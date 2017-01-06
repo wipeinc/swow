@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/wow/character/Archimonde/Sweetlie?apikey=BNET_API_KEY&fields=items&locale=en_GB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-language:
+      - en-GB
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Fri, 06 Jan 2017 14:43:53 GMT
+      last-modified:
+      - Fri, 06 Jan 2017 00:40:08 GMT
+      retry-after:
+      - '600'
+      server:
+      - Apache
+      vary:
+      - Accept-Encoding
+      x-frame-options:
+      - SAMEORIGIN
+      x-mashery-responder:
+      - prod-j-worker-us-east-1b-118.mashery.com
+      x-plan-qps-allotted:
+      - '100'
+      x-plan-qps-current:
+      - '1'
+      x-plan-quota-allotted:
+      - '36000'
+      x-plan-quota-current:
+      - '2'
+      x-plan-quota-reset:
+      - Friday, January 6, 2017 3:00:00 PM GMT
+      content-length:
+      - '2046'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"lastModified":1483663208000,"name":"Sweetlie","realm":"Archimonde","battlegroup":"Misery","class":11,"race":8,"gender":1,"level":110,"achievementPoints":18395,"thumbnail":"archimonde/223/134141151-avatar.jpg","calcClass":"U","faction":1,"items":{"averageItemLevel":892,"averageItemLevelEquipped":880,"head":{"id":139070,"name":"Tranquil
+        Bough Hood","icon":"inv_helm_leather_legionendgame_c_01","quality":4,"itemLevel":885,"tooltipParams":{"transmogItem":135714,"timewalkerLevel":110},"stats":[{"stat":73,"amount":1797},{"stat":49,"amount":457},{"stat":36,"amount":1031},{"stat":7,"amount":2696}],"armor":300,"context":"challenge-mode-jackpot","bonusLists":[3412,1547,3337],"artifactId":0,"displayInfoId":145320,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135714,"itemAppearanceModId":0}},"neck":{"id":132444,"name":"Prydaz,
+        Xavaric''s Magnum Opus","icon":"inv_misc_necklace15","quality":5,"itemLevel":895,"tooltipParams":{"gem0":130219,"enchant":5437,"timewalkerLevel":110},"stats":[{"stat":32,"amount":776},{"stat":49,"amount":1397},{"stat":7,"amount":1665}],"armor":0,"context":"","bonusLists":[3459,3458],"artifactId":0,"displayInfoId":0,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"enchantDisplayInfoId":5437}},"shoulder":{"id":134453,"name":"Spaulders
+        of Aberrant Inhibition","icon":"inv_shoulder_leather_legiondungeon_c_01","quality":4,"itemLevel":875,"tooltipParams":{"gem0":130219,"enchant":5441,"transmogItem":135717,"timewalkerLevel":110},"stats":[{"stat":32,"amount":307},{"stat":73,"amount":1228},{"stat":49,"amount":768},{"stat":7,"amount":1842}],"armor":268,"context":"dungeon-mythic","bonusLists":[1727,1808,1527,3337],"artifactId":0,"displayInfoId":144657,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135717,"enchantDisplayInfoId":5441,"itemAppearanceModId":0}},"back":{"id":142170,"name":"Drape
+        of Shame","icon":"inv_cape_legionendgame_c_03","quality":4,"itemLevel":860,"tooltipParams":{"gem0":130219,"enchant":5436,"tinker":4897,"transmogItem":142991,"timewalkerLevel":110},"stats":[{"stat":40,"amount":479},{"stat":32,"amount":283},{"stat":71,"amount":801},{"stat":7,"amount":1201}],"armor":135,"context":"dungeon-mythic","bonusLists":[1808,3452,1477,3336],"artifactId":0,"displayInfoId":151326,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":142991,"enchantDisplayInfoId":5436,"itemAppearanceModId":0}},"chest":{"id":142432,"name":"Helbeast
+        Skin Tunic","icon":"inv_leather_legionraid_d_01_chest","quality":4,"itemLevel":875,"tooltipParams":{"gem0":130219,"transmogItem":135716,"timewalkerLevel":110},"stats":[{"stat":40,"amount":839},{"stat":64,"amount":614},{"stat":73,"amount":1637},{"stat":36,"amount":594},{"stat":7,"amount":2456}],"armor":358,"context":"raid-heroic","bonusLists":[3468,43,1808,1497,3336],"artifactId":0,"displayInfoId":158499,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135716,"itemAppearanceModId":0}},"wrist":{"id":134280,"name":"Swordsinger''s
+        Wristguards","icon":"inv_bracer_leather_legionendgame_c_01","quality":4,"itemLevel":880,"tooltipParams":{"gem0":130219,"transmogItem":135719,"timewalkerLevel":110},"stats":[{"stat":73,"amount":965},{"stat":49,"amount":587},{"stat":36,"amount":234},{"stat":7,"amount":1448}],"armor":159,"context":"challenge-mode-jackpot","bonusLists":[3418,1808,1542,3337],"artifactId":0,"displayInfoId":145323,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135719,"itemAppearanceModId":0}},"hands":{"id":134371,"name":"Felbat
+        Leather Gloves","icon":"inv_glove_leather_legionendgame_c_01","quality":4,"itemLevel":880,"tooltipParams":{"gem0":130219,"enchant":5444,"transmogItem":135713,"timewalkerLevel":110},"stats":[{"stat":32,"amount":712},{"stat":40,"amount":383},{"stat":73,"amount":1287},{"stat":7,"amount":1930}],"armor":227,"context":"challenge-mode-jackpot","bonusLists":[3418,1808,1542,3337],"artifactId":0,"displayInfoId":145319,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135713,"enchantDisplayInfoId":5444,"itemAppearanceModId":0}},"waist":{"id":139197,"name":"Lifeless
+        Buckled Girdle","icon":"inv_belt_leather_raidmonkmythic_q_01","quality":4,"itemLevel":890,"tooltipParams":{"transmogItem":135718,"timewalkerLevel":110},"stats":[{"stat":40,"amount":471},{"stat":73,"amount":1412},{"stat":49,"amount":666},{"stat":7,"amount":2118}],"armor":211,"context":"raid-mythic","bonusLists":[1806,1512,3336],"artifactId":0,"displayInfoId":155212,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135718,"itemAppearanceModId":0}},"legs":{"id":139201,"name":"Splotched
+        Bloodfur Leggings","icon":"inv_leather_raidrogue_q_01pants","quality":4,"itemLevel":890,"tooltipParams":{"transmogItem":135715,"timewalkerLevel":110},"stats":[{"stat":32,"amount":1083},{"stat":73,"amount":1883},{"stat":49,"amount":433},{"stat":7,"amount":2824}],"armor":329,"context":"raid-heroic","bonusLists":[1805,1512,3337],"artifactId":0,"displayInfoId":157813,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135715,"itemAppearanceModId":0}},"feet":{"id":139933,"name":"Footpads
+        of the Illidari Crusade","icon":"inv_boot_leather_legionendgame_c_01","quality":4,"itemLevel":855,"tooltipParams":{"transmogItem":135712,"timewalkerLevel":110},"stats":[{"stat":73,"amount":1019},{"stat":49,"amount":499},{"stat":36,"amount":499},{"stat":7,"amount":1529}],"armor":230,"context":"quest-reward","bonusLists":[],"artifactId":0,"displayInfoId":145326,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"itemId":135712,"itemAppearanceModId":0}},"finger1":{"id":137042,"name":"Tearstone
+        of Elune","icon":"inv_misc_pearlring2","quality":5,"itemLevel":895,"tooltipParams":{"gem0":130248,"enchant":5427,"timewalkerLevel":110},"stats":[{"stat":36,"amount":1397},{"stat":49,"amount":776},{"stat":7,"amount":1665}],"armor":0,"context":"","bonusLists":[1811],"artifactId":0,"displayInfoId":0,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"enchantDisplayInfoId":5427}},"finger2":{"id":133634,"name":"Grasping
+        Tentacle Loop","icon":"inv_misc_ring_6_0_013","quality":4,"itemLevel":850,"tooltipParams":{"gem0":130222,"enchant":5429,"timewalkerLevel":110},"stats":[{"stat":36,"amount":786},{"stat":49,"amount":1049},{"stat":7,"amount":1094}],"armor":0,"context":"challenge-mode","bonusLists":[3413,1808,1502,1813],"artifactId":0,"displayInfoId":0,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{"enchantDisplayInfoId":5429}},"trinket1":{"id":142166,"name":"Ethereal
+        Urn","icon":"inv_misc_urn_01","quality":4,"itemLevel":880,"tooltipParams":{"timewalkerLevel":110},"stats":[{"stat":49,"amount":1043},{"stat":71,"amount":1631}],"armor":0,"context":"dungeon-mythic","bonusLists":[3454,1477,3336],"artifactId":0,"displayInfoId":0,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{}},"trinket2":{"id":141482,"name":"Unstable
+        Arcanocrystal","icon":"inv_datacrystal04","quality":4,"itemLevel":865,"tooltipParams":{"timewalkerLevel":110},"stats":[{"stat":40,"amount":822},{"stat":32,"amount":822},{"stat":49,"amount":822},{"stat":36,"amount":822}],"armor":0,"context":"raid-normal","bonusLists":[1477,3336],"artifactId":0,"displayInfoId":150195,"artifactAppearanceId":0,"artifactTraits":[],"relics":[],"appearance":{}},"mainHand":{"id":128306,"name":"G''Hanir,
+        the Mother Tree","icon":"inv_staff_2h_artifactnordrassil_d_04","quality":6,"itemLevel":910,"tooltipParams":{"gem0":139249,"gem1":139259,"gem2":143530,"transmogItem":125162,"timewalkerLevel":110},"stats":[{"stat":32,"amount":830},{"stat":49,"amount":798},{"stat":5,"amount":2269},{"stat":7,"amount":3403}],"armor":0,"weaponInfo":{"damage":{"min":5869,"max":8805,"exactMin":5869.0,"exactMax":8804.0},"weaponSpeed":3.6,"dps":2037.9167},"context":"scenario-normal","bonusLists":[725,1528,1524,1524],"artifactId":13,"displayInfoId":152476,"artifactAppearanceId":58,"artifactTraits":[{"id":1335,"rank":1},{"id":140,"rank":3},{"id":129,"rank":1},{"id":132,"rank":5},{"id":126,"rank":1},{"id":134,"rank":3},{"id":136,"rank":3},{"id":127,"rank":1},{"id":133,"rank":3},{"id":137,"rank":3},{"id":130,"rank":3},{"id":128,"rank":1},{"id":138,"rank":1},{"id":135,"rank":4},{"id":131,"rank":3},{"id":139,"rank":1},{"id":1367,"rank":10}],"relics":[{"socket":0,"itemId":139249,"context":6,"bonusLists":[1806,1517,3337]},{"socket":1,"itemId":139259,"context":6,"bonusLists":[1806,1502]},{"socket":2,"itemId":143530,"context":23,"bonusLists":[3454,1477,3336]}],"appearance":{"itemId":125162,"itemAppearanceModId":22}}},"totalHonorableKills":12972}'
+    http_version: 
+  recorded_at: Fri, 06 Jan 2017 14:43:55 GMT
+recorded_with: VCR 3.0.3

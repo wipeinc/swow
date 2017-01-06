@@ -25,5 +25,23 @@ describe Swow::Client do
 			expect(sweetlie).to be_a(Hash)
 			expect(sweetlie["name"]).to eq("Sweetlie")
 		end
+
+		context "field is set to one field" do
+			context "the field is a valid field" do
+				let(:character)  { bnet_eu.character_profile("Archimonde", "Sweetlie", fields: 'items')}
+				it "fetch the field", :vcr do
+					expect(character.has_key?("items")).to be true
+				end
+			end
+		end
+
+		context ":all fields param" do
+			let(:character)  { bnet_eu.character_profile("Archimonde", "Sweetlie", fields: :all)}
+
+			it "fetch all fields", :vcr do
+				druid_fields = Swow::CHARACTER_FIELDS - [ "hunterPets"]
+				expect(druid_fields.all? { |field| character.has_key?(field)} ).to be true
+			end
+		end
 	end
 end

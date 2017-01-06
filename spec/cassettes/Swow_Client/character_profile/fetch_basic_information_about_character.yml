@@ -19,9 +19,9 @@ http_interactions:
       content-type:
       - application/json;charset=UTF-8
       date:
-      - Tue, 03 Jan 2017 10:37:24 GMT
+      - Fri, 06 Jan 2017 14:43:52 GMT
       last-modified:
-      - Tue, 03 Jan 2017 04:12:22 GMT
+      - Fri, 06 Jan 2017 00:40:08 GMT
       retry-after:
       - '600'
       server:
@@ -31,7 +31,7 @@ http_interactions:
       x-frame-options:
       - SAMEORIGIN
       x-mashery-responder:
-      - prod-j-worker-us-east-1b-127.mashery.com
+      - prod-j-worker-us-east-1e-126.mashery.com
       x-plan-qps-allotted:
       - '100'
       x-plan-qps-current:
@@ -41,14 +41,14 @@ http_interactions:
       x-plan-quota-current:
       - '1'
       x-plan-quota-reset:
-      - Tuesday, January 3, 2017 11:00:00 AM GMT
+      - Friday, January 6, 2017 3:00:00 PM GMT
       content-length:
       - '217'
       connection:
       - Close
     body:
       encoding: ASCII-8BIT
-      string: '{"lastModified":1483416742000,"name":"Sweetlie","realm":"Archimonde","battlegroup":"Misery","class":11,"race":8,"gender":1,"level":110,"achievementPoints":18385,"thumbnail":"archimonde/223/134141151-avatar.jpg","calcClass":"U","faction":1,"totalHonorableKills":12867}'
+      string: '{"lastModified":1483663208000,"name":"Sweetlie","realm":"Archimonde","battlegroup":"Misery","class":11,"race":8,"gender":1,"level":110,"achievementPoints":18395,"thumbnail":"archimonde/223/134141151-avatar.jpg","calcClass":"U","faction":1,"totalHonorableKills":12972}'
     http_version: 
-  recorded_at: Tue, 03 Jan 2017 10:37:25 GMT
+  recorded_at: Fri, 06 Jan 2017 14:43:53 GMT
 recorded_with: VCR 3.0.3
