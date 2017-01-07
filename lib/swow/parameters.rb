@@ -30,7 +30,7 @@ module Swow
         value = value.to_s if value == true || value == false
         if value.nil?
           buffer << "#{encoded_key}&"
-        elsif value.is_a?(Array)
+        elsif value.is_a? Enumerable
           list_buffer = value.map { |sub_value| escape(sub_value)}.join(',')
           buffer << "#{encoded_key}=#{list_buffer}&"
         else

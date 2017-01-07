@@ -1,3 +1,6 @@
+require "swow/client/realm"
+require "swow/client/character"
+
 module Swow
 
   class Client
@@ -5,6 +8,9 @@ module Swow
     CHARACTER_PROFILE_REQUEST = "/wow/character".freeze
 
   	include Swow::Constants
+
+    include Swow::Client::Realm
+    include Swow::Client::Character
 
   	def initialize(api_key, region, locale: 'en_GB', logger: :logger)
   		raise "Invalid region #{region}" unless REGIONS.include?(region)
@@ -28,27 +34,11 @@ module Swow
   		"https://#{@region}.api.battle.net"
   	end
 
-  	def realm_status(locale: @locale)
-  		request = @conn.get REALM_STATUS_REQUEST, {locale: locale}
-  		request.body
-  	end
-
-
-    def character_profile(realm, name, fields: [], locale: @locale)
-      fields = CHARACTER_FIELDS if fields == :all
-      fields = [fields].flatten
-      if !fields.empty? && !fields.all? { |field| CHARACTER_FIELDS.include?(field) }
-        raise "Invalid field array #{field}"
-      end
-
-      params = {fields: fields, locale: locale}.select { |_, v| !v.empty? && !v.nil? }
-      request = @conn.get("#{CHARACTER_PROFILE_REQUEST}/#{realm}/#{name}",
-                          params)
-      request.body
-
-    end
-
   	private
+
+    def clean_params(params)
+      params.select { |_, v| !v.nil? && !v.empty? }
+    end
 
   	def default_params
   		{ apikey: @api_key, locale: @locale }
