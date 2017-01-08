@@ -1,16 +1,16 @@
 require "swow/client/realm"
 require "swow/client/character"
+require "swow/client/data"
 
 module Swow
 
   class Client
-  	REALM_STATUS_REQUEST = "/wow/realm/status".freeze
-    CHARACTER_PROFILE_REQUEST = "/wow/character".freeze
 
   	include Swow::Constants
 
     include Swow::Client::Realm
     include Swow::Client::Character
+    include Swow::Client::Data
 
   	def initialize(api_key, region, locale: 'en_GB', logger: :logger)
   		raise "Invalid region #{region}" unless REGIONS.include?(region)

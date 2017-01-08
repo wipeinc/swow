@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/wow/data/character/classes?apikey=BNET_API_KEY&locale=en_GB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.10.1
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-language:
+      - en-GB
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Sun, 08 Jan 2017 10:12:14 GMT
+      retry-after:
+      - '600'
+      server:
+      - Apache
+      vary:
+      - Accept-Encoding
+      x-frame-options:
+      - SAMEORIGIN
+      x-mashery-responder:
+      - prod-j-worker-us-east-1e-126.mashery.com
+      x-plan-qps-allotted:
+      - '100'
+      x-plan-qps-current:
+      - '1'
+      x-plan-quota-allotted:
+      - '36000'
+      x-plan-quota-current:
+      - '1'
+      x-plan-quota-reset:
+      - Sunday, January 8, 2017 11:00:00 AM GMT
+      content-length:
+      - '259'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"classes":[{"id":1,"mask":1,"powerType":"rage","name":"Warrior"},{"id":2,"mask":2,"powerType":"mana","name":"Paladin"},{"id":3,"mask":4,"powerType":"focus","name":"Hunter"},{"id":4,"mask":8,"powerType":"energy","name":"Rogue"},{"id":5,"mask":16,"powerType":"mana","name":"Priest"},{"id":6,"mask":32,"powerType":"runic-power","name":"Death
+        Knight"},{"id":7,"mask":64,"powerType":"mana","name":"Shaman"},{"id":8,"mask":128,"powerType":"mana","name":"Mage"},{"id":9,"mask":256,"powerType":"mana","name":"Warlock"},{"id":10,"mask":512,"powerType":"energy","name":"Monk"},{"id":11,"mask":1024,"powerType":"mana","name":"Druid"},{"id":12,"mask":2048,"powerType":"fury","name":"Demon
+        Hunter"}]}'
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 10:12:14 GMT
+recorded_with: VCR 3.0.3

@@ -1,5 +1,7 @@
 module Swow
   class Client
+    CHARACTER_PROFILE_REQUEST = "/wow/character".freeze
+
     module Character
       def character_profile(realm, name, fields: [], locale: @locale)
         fields = CharacterFields.new(fields)

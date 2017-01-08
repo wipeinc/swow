@@ -19,6 +19,14 @@ describe Swow::Client do
 		end
 	end
 
+	describe "character_classes" do
+		let(:character_classes) { bnet_eu.character_classes }
+		it "contain an array of classes", :vcr do
+			expect(character_classes).to be_a(Hash)
+			expect(character_classes["classes"]).to be_a(Array)
+		end
+	end
+
 	describe "character_profile" do
 		let(:sweetlie) { bnet_eu.character_profile("Archimonde", "Sweetlie")}
 		it "fetch basic information about character", :vcr do
