@@ -3,6 +3,7 @@ module Swow
     module Character
       def character_profile(realm, name, fields: [], locale: @locale)
         fields = CharacterFields.new(fields)
+        fields.validate!
         params = clean_params({fields: fields, locale: locale})
         request = @conn.get("#{CHARACTER_PROFILE_REQUEST}/#{realm}/#{name}",
                             params)

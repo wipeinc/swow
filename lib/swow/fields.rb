@@ -1,4 +1,5 @@
 require "forwardable"
+require "set"
 
 module Swow
   class Fields
@@ -8,18 +9,24 @@ module Swow
     include Enumerable
 
     def initialize(fields, valid_fields)
-      @valid_fields = valid_fields
-      fields = @valid_fields if fields == :all
-      fields = [fields].flatten
-      @fields = fields
+      @valid_fields = valid_fields.to_set.flatten
+      if fields == :all
+        @fields = @valid_fields
+      else
+        if fields.is_a? Enumerable
+          @fields = fields.to_set.flatten
+        else
+          @fields = Set.new [fields]
+        end
+      end
     end
 
     def valid?
-      @fields.empty? || @fields.all? { |field| @valid_fields.include?(field) }
+      @fields.subset?(@valid_fields)
     end
 
     def validate!
-      raise "Invalid field array #{@field}" unless valid?
+      raise "Invalid fields: #{@fields.inspect}" unless valid?
     end
   end
 
