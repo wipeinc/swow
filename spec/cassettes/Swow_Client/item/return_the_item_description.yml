@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/wow/item/18803?apikey=BNET_API_KEY&locale=en_GB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-language:
+      - en-GB
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Mon, 13 Feb 2017 14:19:31 GMT
+      retry-after:
+      - '600'
+      server:
+      - Apache
+      vary:
+      - Accept-Encoding
+      x-frame-options:
+      - SAMEORIGIN
+      x-mashery-responder:
+      - prod-j-worker-us-east-1d-113.mashery.com
+      x-plan-qps-allotted:
+      - '100'
+      x-plan-qps-current:
+      - '1'
+      x-plan-quota-allotted:
+      - '36000'
+      x-plan-quota-current:
+      - '2'
+      x-plan-quota-reset:
+      - Monday, February 13, 2017 3:00:00 PM GMT
+      content-length:
+      - '605'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":18803,"disenchantingSkillRank":225,"description":"Property of
+        Finkle Einhorn, Grandmaster Adventurer","name":"Finkle''s Lava Dredger","icon":"inv_gizmo_02","stackable":1,"itemBind":1,"bonusStats":[{"stat":40,"amount":16},{"stat":51,"amount":11},{"stat":5,"amount":18},{"stat":7,"amount":19}],"itemSpells":[],"buyPrice":474384,"itemClass":2,"itemSubClass":5,"containerSlots":0,"weaponInfo":{"damage":{"min":81,"max":122,"exactMin":81.0,"exactMax":122.0},"weaponSpeed":2.9,"dps":35.0},"inventoryType":17,"equippable":true,"itemLevel":70,"maxCount":0,"maxDurability":120,"minFactionId":0,"minReputation":0,"quality":4,"sellPrice":94876,"requiredSkill":0,"requiredLevel":60,"requiredSkillRank":0,"itemSource":{"sourceId":179703,"sourceType":"GAME_OBJECT_DROP"},"baseArmor":0,"hasSockets":false,"isAuctionable":false,"armor":0,"displayInfoId":31265,"nameDescription":"","nameDescriptionColor":"000000","upgradable":true,"heroicTooltip":false,"context":"","bonusLists":[],"availableContexts":[""],"bonusSummary":{"defaultBonusLists":[],"chanceBonusLists":[],"bonusChances":[]},"artifactId":0}'
+    http_version: 
+  recorded_at: Mon, 13 Feb 2017 14:19:31 GMT
+recorded_with: VCR 3.0.3

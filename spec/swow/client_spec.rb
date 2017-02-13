@@ -20,6 +20,18 @@ describe Swow::Client do
 		end
 	end
 
+	describe "item" do
+		let(:item) { bnet_eu.item("18803") }
+		it "return the item description", :vcr do
+			expect(item).to be_a(Hash)
+		end
+		context "itemid is not a number != 0" do
+			it "raise an error" do
+				expect { bnet_eu.item("zzz")}.to raise_error(/not a valid item id/)
+			end
+		end
+	end
+
 	describe "realm_status" do
 		let(:eu_realm_status) { bnet_eu.realm_status }
 		it "contains a realm array", :vcr do

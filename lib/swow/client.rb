@@ -2,6 +2,7 @@ require "swow/client/realm"
 require "swow/client/character"
 require "swow/client/data"
 require "swow/client/auction"
+require "swow/client/item"
 
 module Swow
 
@@ -13,6 +14,7 @@ module Swow
     include Swow::Client::Character
     include Swow::Client::Data
     include Swow::Client::Auction
+    include Swow::Client::Item
 
   	def initialize(api_key, region, locale: 'en_GB', logger: :logger)
   		raise "Invalid region #{region}" unless REGIONS.include?(region)
