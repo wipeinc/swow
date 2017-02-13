@@ -4,10 +4,7 @@ module Swow
 
     module Auction
       def auction_data_status(realm, locale: @locale)
-        params = clean_params({locale: locale})
-        request = @conn.get("#{AUCTION_DATA_STATUS_REQUEST}/#{realm}",
-                            params)
-        request.body
+        get("#{AUCTION_DATA_STATUS_REQUEST}/#{realm}", locale: locale)
       end
     end
   end

@@ -4,8 +4,7 @@ module Swow
 
     module Data
       def character_classes(locale: @locale)
-        request = @conn.get CHARACTER_CLASSES_REQUEST, {locale: locale}
-        request.body
+        get CHARACTER_CLASSES_REQUEST, locale: locale
       end
     end
   end

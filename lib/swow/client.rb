@@ -38,6 +38,12 @@ module Swow
 
   	private
 
+    def get(path, fields: {}, locale: @locale)
+      params = clean_params({fields: fields, locale: locale})
+      @conn.get(path, params).body
+
+    end
+
     def clean_params(params)
       params.select { |_, v| !v.nil? && !v.empty? }
     end
