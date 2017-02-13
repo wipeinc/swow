@@ -18,8 +18,6 @@ module Swow
         @response[:body]['reason']
       end
 
-      private
-
       def self.nok?(response)
         response[:body].respond_to?(:each_key) && response[:body]['status'] == 'nok'
       end
