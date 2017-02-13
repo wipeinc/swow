@@ -11,6 +11,15 @@ describe Swow::Client do
 		expect { xx }.to raise_error("Invalid region xx")
 	end
 
+	describe "auction_data_status" do
+		let(:auction_data_status) { bnet_eu.auction_data_status("Archimonde") }
+		it "return an url to the auction data", :vcr do
+			expect(auction_data_status).to be_a(Hash)
+			expect(auction_data_status["files"]).to be_a(Array)
+			expect(auction_data_status["files"].first.keys).to include("url", "lastModified")
+		end
+	end
+
 	describe "realm_status" do
 		let(:eu_realm_status) { bnet_eu.realm_status }
 		it "contains a realm array", :vcr do
