@@ -24,7 +24,9 @@ describe Swow::Client do
 		let(:item) { bnet_eu.item("18803") }
 		it "return the item description", :vcr do
 			expect(item).to be_a(Hash)
+			expect(item["name"]).to eq("Finkle's Lava Dredger")
 		end
+		
 		context "itemid is not a number != 0" do
 			it "raise an error" do
 				expect { bnet_eu.item("zzz")}.to raise_error(/not a valid item id/)
