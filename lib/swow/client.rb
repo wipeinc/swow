@@ -27,6 +27,7 @@ module Swow
   			  builder.request  :url_encoded
   			  builder.response :detailed_logger, logger if logger
           builder.response :battlenet_errors
+          builder.response :timestamps_parser
   			  builder.response :oj # parse json code
 
           builder.options[:params_encoder] = Swow::ParamsEncoder

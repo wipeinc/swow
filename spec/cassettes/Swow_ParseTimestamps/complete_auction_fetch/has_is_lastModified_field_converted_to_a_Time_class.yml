@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/wow/auction/data/Archimonde?apikey=BNET_API_KEY&locale=en_GB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-language:
+      - en-GB
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Wed, 15 Feb 2017 12:55:41 GMT
+      last-modified:
+      - Tue, 14 Feb 2017 01:30:35 GMT
+      retry-after:
+      - '600'
+      server:
+      - Apache
+      vary:
+      - Accept-Encoding
+      x-frame-options:
+      - SAMEORIGIN
+      x-mashery-responder:
+      - prod-j-worker-us-east-1b-127.mashery.com
+      x-plan-qps-allotted:
+      - '100'
+      x-plan-qps-current:
+      - '1'
+      x-plan-quota-allotted:
+      - '36000'
+      x-plan-quota-current:
+      - '1'
+      x-plan-quota-reset:
+      - Wednesday, February 15, 2017 1:00:00 PM GMT
+      content-length:
+      - '144'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"files":[{"url":"http://auction-api-eu.worldofwarcraft.com/auction-data/e082f9177dbb81bb5ab7e747bf02b270/auctions.json","lastModified":1487035835000}]}'
+    http_version: 
+  recorded_at: Wed, 15 Feb 2017 12:55:41 GMT
+recorded_with: VCR 3.0.3
