@@ -49,7 +49,7 @@ describe Swow::ParseTimestamps do
 
   describe "complete auction fetch" do
     let(:bnet_eu) { Swow::Client.new(ENV["BNET_API_KEY"], "eu", logger: false) }
-    subject { bnet_eu.auction_data_status("Archimonde") }
+    subject { bnet_eu.auction_data_status("Archimonde").body }
     it "has is lastModified field converted to a Time class", :vcr do
       expect(subject["files"][0]["lastModified"]).to be_a Time
     end

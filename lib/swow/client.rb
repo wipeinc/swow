@@ -43,7 +43,7 @@ module Swow
 
     def get(path, fields: {}, locale: @locale)
       params = clean_params({fields: fields, locale: locale})
-      @conn.get(path, params).body
+      @conn.get(path, params)
     end
 
     def clean_params(params)
