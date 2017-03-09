@@ -1,8 +1,9 @@
 require "faraday"
 require 'faraday_middleware'
 require 'faraday_middleware/parse_oj'
-require "faraday/detailed_logger"
-require "oj"
+require 'faraday/detailed_logger'
+require 'oj'
+require 'addressable'
 
 require "swow/version"
 require "swow/constants"

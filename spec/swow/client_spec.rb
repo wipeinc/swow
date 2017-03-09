@@ -42,6 +42,14 @@ describe Swow::Client do
 		end
 	end
 
+	describe "guild" do
+		let(:zerator_tv) { bnet_eu.guild_profile("Archimonde", "ZeratoR TV").body }
+		it "fetch basic informations about guilds", :vcr do
+			expect(zerator_tv).to be_a(Hash)
+			expect(zerator_tv["name"]).to eq("ZeratoR TV")
+		end
+	end
+
 	describe "character_classes" do
 		let(:character_classes) { bnet_eu.character_classes.body }
 		it "contain an array of classes", :vcr do

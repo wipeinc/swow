@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.battle.net/wow/guild/Archimonde/ZeratoR%20TV?apikey=BNET_API_KEY&locale=en_GB
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-language:
+      - en-GB
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Thu, 09 Mar 2017 00:31:17 GMT
+      last-modified:
+      - Thu, 09 Mar 2017 00:05:13 GMT
+      retry-after:
+      - '600'
+      server:
+      - Apache
+      vary:
+      - Accept-Encoding
+      x-frame-options:
+      - SAMEORIGIN
+      x-mashery-responder:
+      - prod-j-worker-us-east-1b-109.mashery.com
+      x-plan-qps-allotted:
+      - '100'
+      x-plan-qps-current:
+      - '1'
+      x-plan-quota-allotted:
+      - '36000'
+      x-plan-quota-current:
+      - '1'
+      x-plan-quota-reset:
+      - Thursday, March 9, 2017 1:00:00 AM GMT
+      content-length:
+      - '214'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"lastModified":1489017913000,"name":"ZeratoR TV","realm":"Archimonde","battlegroup":"Misery","level":25,"side":1,"achievementPoints":2695,"emblem":{"icon":67,"iconColor":"ffb1b8b1","iconColorId":14,"border":3,"borderColor":"ffffffff","borderColorId":14,"backgroundColor":"ffff38fa","backgroundColorId":36}}'
+    http_version: 
+  recorded_at: Thu, 09 Mar 2017 00:31:19 GMT
+recorded_with: VCR 3.0.3

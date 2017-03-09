@@ -3,6 +3,7 @@ require "swow/client/character"
 require "swow/client/data"
 require "swow/client/auction"
 require "swow/client/item"
+require "swow/client/guild"
 
 module Swow
 
@@ -15,6 +16,7 @@ module Swow
     include Swow::Client::Data
     include Swow::Client::Auction
     include Swow::Client::Item
+    include Swow::Client::Guild
 
   	def initialize(api_key, region, locale: 'en_GB', logger: :logger)
   		raise "Invalid region #{region}" unless REGIONS.include?(region)
@@ -42,6 +44,7 @@ module Swow
   	private
 
     def get(path, fields: {}, locale: @locale)
+      path = Addressable::URI.parse(path).normalize.path
       params = clean_params({fields: fields, locale: locale})
       @conn.get(path, params)
     end

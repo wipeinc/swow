@@ -35,4 +35,11 @@ module Swow
       super(fields, Swow::Constants::CHARACTER_FIELDS)
     end
   end
+
+
+  class GuildFields < Fields
+    def initialize(fields)
+      super(fields, Swow::Constants::GUILD_FIELDS)
+    end
+  end
 end
