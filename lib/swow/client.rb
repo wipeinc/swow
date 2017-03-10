@@ -4,6 +4,7 @@ require "swow/client/data"
 require "swow/client/auction"
 require "swow/client/item"
 require "swow/client/guild"
+require "swow/client/mount"
 
 module Swow
 
@@ -17,8 +18,9 @@ module Swow
     include Swow::Client::Auction
     include Swow::Client::Item
     include Swow::Client::Guild
+    include Swow::Client::Mount
 
-  	def initialize(api_key, region, locale: 'en_GB', logger: :logger)
+  	def initialize(api_key, region, locale: 'en_GB', logger: false)
   		raise "Invalid region #{region}" unless REGIONS.include?(region)
 
   		@api_key  = api_key
@@ -27,7 +29,13 @@ module Swow
 
   		@conn = Faraday.new(url: base_url, params: default_params) do |builder|
   			  builder.request  :url_encoded
-  			  builder.response :detailed_logger, logger if logger
+          if logger
+               if logger == true
+                 logger = Logger.new(STDERR)
+                 logger.level = Logger::INFO
+               end
+  			       builder.response :detailed_logger, logger
+          end
           builder.response :battlenet_errors
           builder.response :timestamps_parser
   			  builder.response :oj # parse json code

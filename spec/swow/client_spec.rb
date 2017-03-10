@@ -20,6 +20,15 @@ describe Swow::Client do
 		end
 	end
 
+	describe "mount" do
+		let(:mounts) { bnet_eu.mounts.body }
+		it "return an array of mounts", :vcr do
+			expect(mounts).to be_a(Hash)
+			expect(mounts["mounts"]).to be_a(Array)
+			expect(mounts["mounts"].first.keys).to include("name", "isGround")
+		end
+	end
+
 	describe "item" do
 		let(:item) { bnet_eu.item("18803").body }
 		it "return the item description", :vcr do
