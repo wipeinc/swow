@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Sweetlie"]
   spec.email         = ["libellule.se@gmail.com"]
 
-  spec.summary       = "Sweet battle.net wrapper for WoW armory"
+  spec.summary       = "sweet battle.net API parser for World of Warcraft"
   spec.homepage      = "https://github.com/wow-sweetlie/swow"
   spec.license       = "MIT"
 
