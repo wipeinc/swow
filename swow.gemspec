@@ -35,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'faraday_middleware', '~> 0.11.0.1'
   spec.add_runtime_dependency 'faraday_middleware-parse_oj', '~> 0.3.0'
   spec.add_runtime_dependency 'faraday-detailed_logger', '~> 2.1'
+  spec.add_runtime_dependency 'thor', '~> 0.19.4'
 
   spec.add_development_dependency "bundler", "~> 1.13"
 end
