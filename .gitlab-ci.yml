@@ -1,0 +1,10 @@
+image: ruby:2.3
+
+cache:
+  paths:
+  - vendor/
+
+test:
+  script:
+    - bundle install --path vendor
+    - bunddle exec rake spec
