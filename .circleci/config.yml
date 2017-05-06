@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ruby:2.3
+    working_directory: ~/app
+    steps:
+      - checkout
+      - run: bundle install
+      - run: bundle exec rake
