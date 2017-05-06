@@ -5,6 +5,7 @@ require 'faraday/detailed_logger'
 require 'oj'
 require 'addressable'
 
+
 require "swow/version"
 require "swow/constants"
 require "swow/fields"
@@ -12,6 +13,8 @@ require "swow/parameters"
 require "swow/error"
 require "swow/timestamp"
 require "swow/client"
+require "swow/print"
+require "swow/cli"
 
 module Swow
   include Swow::Constants

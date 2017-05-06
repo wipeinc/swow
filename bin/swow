@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby -U
+
+require 'swow'
+Swow::CLI.start( ARGV )
