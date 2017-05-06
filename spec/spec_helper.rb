@@ -2,9 +2,7 @@ $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "swow"
 require 'vcr'
 require 'dotenv'
-require 'coveralls'
 
-Coveralls.wear!
 Dotenv.load
 
 VCR.configure do |c|
