@@ -7,4 +7,4 @@ cache:
 test:
   script:
     - bundle install --path vendor
-    - bunddle exec rake spec
+    - bundle exec rake spec
