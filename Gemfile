@@ -7,12 +7,12 @@ group :development do
 end
 
 group :test do
-  gem 'coveralls'
+  gem 'codecov', require: false
   gem 'rspec', ">= 3.0"
   gem 'vcr', '~> 3.0'
   gem 'dotenv'
   gem 'rubocop'
-  gem 'simplecov'
+  gem 'simplecov', require: false
 end
 
 

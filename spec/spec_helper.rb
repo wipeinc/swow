@@ -5,6 +5,14 @@ require 'dotenv'
 
 Dotenv.load
 
+require 'simplecov'
+SimpleCov.start
+
+if ENV['CI'] == 'true'
+  require 'codecov'
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
+end
+
 VCR.configure do |c|
 	c.cassette_library_dir = 'spec/cassettes'
 	c.hook_into :faraday
