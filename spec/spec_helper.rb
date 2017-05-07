@@ -1,12 +1,12 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+require 'simplecov'
+SimpleCov.start
 require "swow"
 require 'vcr'
 require 'dotenv'
 
 Dotenv.load
 
-require 'simplecov'
-SimpleCov.start
 
 if ENV['CI'] == 'true'
   require 'codecov'
