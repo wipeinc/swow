@@ -1,17 +1,16 @@
+# require simplecov before anything else
+if ENV["CI"] || ENV["COVERAGE"]
+  require 'simplecov'
+  SimpleCov.start
+end
+
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require 'simplecov'
-SimpleCov.start
 require "swow"
 require 'vcr'
 require 'dotenv'
 
 Dotenv.load
 
-
-if ENV['CI'] == 'true'
-  require 'codecov'
-  SimpleCov.formatter = SimpleCov::Formatter::Codecov
-end
 
 VCR.configure do |c|
 	c.cassette_library_dir = 'spec/cassettes'

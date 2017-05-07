@@ -8,5 +8,5 @@ jobs:
       - checkout
       - run: bundle install
       - run: bundle exec rake
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run: bundle exec codeclimate-test-reporter
 
